@@ -1,11 +1,11 @@
-document.ready(function() {
+// $(document).ready(function() {
 
-  var $tweet = $('#tweet')
-  var $counter = $('.counter')
+//   var $tweet = $('#tweet')
+//   var $counter = $('.counter')
 
-  $tweet.addEventListener('input', function() {
-    $counter.innerText = this.value.length
-  })
+//   $tweet.addEventListener('input', function() {
+//     $counter.innerText = this.value.length
+//   })
 
 
-});
+// });
