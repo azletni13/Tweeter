@@ -1,0 +1,62 @@
+.existing-tweets {
+  border: 2px solid #e4e4e4;
+  border-radius: 5px;
+  background-color: white;
+  margin: 20px 0px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.existing-tweets header {
+  background-color: #eee;
+  height: 60px;
+}
+
+.existing-tweets h2 {
+  display: inline;
+  position: relative;
+  bottom: 26px;
+  font-size: 25px;
+}
+
+.existing-tweets .tweet-body {
+  height: 60px;
+  border-bottom: 1px solid #eee;
+  padding: 0px 5px;
+  word-wrap: break-word;
+}
+
+.existing-tweets img {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+}
+
+.existing-tweets .handle {
+  float: right;
+  margin: 10px;
+}
+
+.existing-tweets .time-stamp {
+  margin: 10px;
+  font-size: 12px;
+}
+
+.existing-tweets:hover {
+  border: 2px solid black;
+}
+
+.new-tweet:hover {
+  border: 2px solid black;
+}
+
+.existing-tweets .icons i:hover {
+  color: #00A087;
+}
+
+.icons {
+  float: right;
+  padding-right: 10px;
+}
