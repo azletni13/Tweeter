@@ -2,7 +2,7 @@
 
 $(document).ready(() => {
 
-
+  //calculates time of tweet
   const timeAgo = (tweetTime) => {
     const todayTime = new Date().getTime();
     const timeDiff = todayTime - tweetTime;
@@ -16,8 +16,7 @@ $(document).ready(() => {
       return `${Math.round(hoursDiff / 24, 0)} days ago`;
     }
   }
-
-
+  //creates tweet element
   const createTweetElement = (newTweet) => {
 
     const img = newTweet.user.avatars.small;
@@ -25,8 +24,6 @@ $(document).ready(() => {
     const handle = newTweet.user.handle;
     const content = newTweet.content.text;
     const timeStamp = timeAgo(newTweet.created_at);
-
-  ;
 
   const myHTML =
     `<article class="existing-tweets">
@@ -48,17 +45,18 @@ $(document).ready(() => {
 
     $('#existing-tweets').append(myHTML);
   };
-
+  //creates a tweet element for each tweet held in database
   const renderTweets = (tweets) => {
-    // loops through tweets
+    //empties page of existing tweets to render all tweets
     $('#existing-tweets').empty();
+    // loops through tweets
     tweets.forEach(tweet =>{
       createTweetElement(tweet);
     })
   };
 
   var $form = $('#tweetForm');
-
+  //submits tweet through AJAX
   $form.submit(function (ev) {
     ev.preventDefault()
     var inputArr = $(this).serializeArray();
